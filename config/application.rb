@@ -22,5 +22,15 @@ module Ponyexpress
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # TODO this needs to be updated for production - we can allow specific domains
+    # found that this is buggy in dev though
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+
   end
 end
