@@ -1,4 +1,4 @@
-class CreateParcel < ActiveRecord::Migration
+class CreateParcels < ActiveRecord::Migration
   def change
 
     create_table :parcels do |t|
