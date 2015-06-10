@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  post 'ponyexpress' => 'parcel#create'
+  post 'send' => 'parcel#create'
 
 end

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 1) do
     t.string "to"
     t.string "from"
     t.text   "message"
-    t.json   "payload"
+    t.json   "fields"
   end
 
 end

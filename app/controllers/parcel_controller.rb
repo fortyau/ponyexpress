@@ -6,16 +6,13 @@ class ParcelController < ApplicationController
     @parcel.to = params[:to]
     @parcel.from = params[:from]
     @parcel.message = params[:message]
-    @parcel.payload = params[:payload]
+    @parcel.fields = params[:fields]
 
-    @parcel.save
-
-
-    render json: {
-               parcel: @parcel,
-               message: "good"
-           }
-
+    if @parcel.save
+      redirect_to params[:redirect][:success]
+    else
+      redirect_to params[:redirect][:failure]
+    end
   end
 
 end

@@ -5,7 +5,7 @@ class CreateParcel < ActiveRecord::Migration
       t.string :to
       t.string :from
       t.text :message
-      t.json :payload
+      t.json :fields
     end
 
   end
