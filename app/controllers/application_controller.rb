@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-  before_filter :protect
+  # before_filter :protect
 
   def protect
     w = Whip.find_by_ip(request.remote_ip)
