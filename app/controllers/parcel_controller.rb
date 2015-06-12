@@ -9,6 +9,7 @@ class ParcelController < ApplicationController
     @parcel.fields = params[:fields]
 
     if @parcel.save
+      RelayMailer.mail(params).deliver_now
       redirect_to params[:redirect][:success]
     else
       redirect_to params[:redirect][:failure]

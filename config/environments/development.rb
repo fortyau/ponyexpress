@@ -38,4 +38,16 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+
+  ActionMailer::Base.smtp_settings = {
+    DOMAIN:         "localhost:3000",
+    SENDER_EMAIL:   "tallyboxx@gmail.com",
+    MAILER_DOMAIN:  "gmail.com",
+    SMTP_SERVER:    "smtp.gmail.com",
+    SMTP_PORT:      587,
+    SMTP_USER:      "newmanmailer@gmail.com",
+    SMTP_PWD:       "!!newmanmailer14"
+  }
+
 end

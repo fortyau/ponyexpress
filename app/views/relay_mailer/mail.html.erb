@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+    <h1>a message from <%= @params["from"] %></h1>
+
+    <p>
+      <%= @params["message"] %>
+    </p>
+
+    <table>
+      <thead>
+          <tr>
+            <th>Field</th>
+            <th>Value</th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <%- @params["fields"].each do |key, value| %>
+            <tr>
+              <td><%= key %></td>
+              <td><%= value %></td>
+            </tr>
+        <%- end %>
+      </tbody>
+    </table>
+
+    <p>
+      Thanks for using the ponyexpress and have a great day!<br>
+      Jack H Keetley (The joyous jockey of the Pony Express)
+    </p>
+</body>
+</html>
